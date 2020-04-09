@@ -1,13 +1,12 @@
 <template>
     <layout>
-        <p>主页</p>
+    <p>统计页</p>
     </layout>
 </template>
 
 <script>
-
     export default {
-        name: "home",
+        name: "Statistics"
     }
 </script>
 

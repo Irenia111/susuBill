@@ -26,9 +26,12 @@
                 this.selectedItem.name = this.tagRecord.name;
                 this.selectedItem.iconName=this.tagRecord.iconName;
             }else{
+                /*因为showTagList的值是一个回调，所以不能直接使用*/
+                //console.log(this.showTagList)
                 this.selectedItem.name = this.showTagList[0].name;
                 this.selectedItem.index = this.showTagList[0].index;
                 this.selectedItem.iconName = this.showTagList[0].iconName;
+
             }
         },
         watch:{

@@ -197,11 +197,14 @@
                 }
 
                 if(list.length !== 0){
+
+                    const splitFlag = dateRange === 31 ? 2:1;
+
                     for(let i=0;i<dateRange;i++){
                         const numberList = list.filter(
                             function (item) {
                                 //console.log(item.date.split('-')[2]-0)
-                                return item.date.split('-')[2]-0 === i+1}
+                                return item.date.split('-')[splitFlag]-0 === i+1}
                         ).map(item=>item.number);
                         //console.log(numberList)
                         this.chartData[i].total = getTotal(numberList)

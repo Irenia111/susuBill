@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="qrWrapper">
             <h1>为保证预览效果，请扫描二维码</h1>
-            <img src="../assets/img/android-chrome-192x192.png">
+            <img src="../assets/img/qrCode.png">
         </div>
     </div>
 </template>
@@ -25,7 +25,7 @@
             position: fixed;
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-85%);
+            transform: translate(-50%,-60%);
             display: flex;
             align-items: center;
             justify-content: center;

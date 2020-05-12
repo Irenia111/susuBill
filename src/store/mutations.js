@@ -1,4 +1,6 @@
 import {getTagRecord} from "../api";
+import tagRecordList from "@/assets/tagRecord";
+import recordListDemo from "@/assets/recordList";
 
 
 
@@ -7,12 +9,17 @@ const mutations = {
     fetchTagRecord(state){
         //console.log( window.localStorage.getItem("tagRecord") ==null)
         if(window.localStorage.getItem("tagRecord") ==null){
-            console.log("hi")
+            //console.log("hi")
+            /*
             getTagRecord().then((tagList)=>{
                 window.localStorage.setItem("tagRecord",JSON.stringify(tagList));
                 state.tagRecord = JSON.parse(window.localStorage.getItem("tagRecord"));
                 state.createTagIndex = state.tagRecord[state.tagRecord.length - 1].index
             });
+             */
+            window.localStorage.setItem("tagRecord",JSON.stringify(tagRecordList));
+            state.tagRecord = JSON.parse(window.localStorage.getItem("tagRecord"));
+            state.createTagIndex = state.tagRecord[state.tagRecord.length - 1].index
         }else{
             state.tagRecord = JSON.parse(window.localStorage.getItem("tagRecord"));
             state.createTagIndex = state.tagRecord[state.tagRecord.length - 1].index;
@@ -23,11 +30,14 @@ const mutations = {
         //console.log(window.localStorage.getItem("tagRecord")==null)
 
         if(window.localStorage.getItem("tagRecord")==null){
+            /*
             getTagRecord().then((tagList)=>{
                 //console.log(tagList);
                 state.showTagRecord = tagList.filter(function(item){return  item.type === type;});
                 //console.log(state.showTagRecord);
             });
+             */
+            state.showTagRecord = tagRecordList.filter(function(item){return  item.type === type;});
         }else{
             const tagList0 = JSON.parse(window.localStorage.getItem("tagRecord"));
             //console.log(tagList0);
@@ -36,6 +46,7 @@ const mutations = {
     },
     fetchRecordList(state){
         state.recordList = JSON.parse(window.localStorage.getItem("recordList"))||[];
+            //recordListDemo;
     },
     fetchBudgetList(state){
         state.budgetList = JSON.parse(window.localStorage.getItem("budgetList")) || [];

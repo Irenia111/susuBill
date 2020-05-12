@@ -33,6 +33,7 @@
     import VHeader from "@/components/Header.vue";
     import MyIcon from "@/components/MyIcon";
     import {getTagData} from "@/api";
+    import tagDataList from "@/assets/tagData";
 
 
 
@@ -41,7 +42,7 @@
         components: {VHeader,MyIcon},
         created() {
 
-            getTagData().then((tagList)=>{
+            /*getTagData().then((tagList)=>{
                 this.tagList = tagList;
                 //console.log(this.tagType);
                 const type = this.tagType;
@@ -49,6 +50,14 @@
                 //初始化选中的icon
                 this.iconChoseName = this.showTagList[0].iconName;
             });
+
+             */
+            this.tagList = tagDataList;
+            //console.log(this.tagType);
+            const type = this.tagType;
+            this.showTagList = tagDataList.filter(function(item){return  item.type === type;});
+            //初始化选中的icon
+            this.iconChoseName = this.showTagList[0].iconName;
 
         },
         data(){

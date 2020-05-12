@@ -34,6 +34,7 @@
     import VHeader from "@/components/Header.vue";
     import MyIcon from "@/components/MyIcon";
     import {getTagData} from "@/api";
+    import tagDataList from "@/assets/tagData";
 
 
 
@@ -47,16 +48,7 @@
         },
         beforeCreate() {
             this.$store.commit("fetchTagRecord");
-        },
-        created() {
-
-            getTagData().then((tagList)=>{
-                this.tagList = tagList;
-                //console.log(this.tagType);
-                const type = this.tagType;
-                this.showTagList = tagList.filter(function(item){return  item.type === type;});
-            })
-
+            this.tagList=tagDataList;
         },
         mounted(){
             const index = this.$route.params.index;
@@ -74,10 +66,13 @@
             //这个方法不能用
             //const item = this.tagRecord.filter(function(item){return item.index === index;});
             const item = this.tagRecord[itemIndex];
-            //console.log(item);
             this.tagType = item.type;
+            const type = item.type
+            this.showTagList=tagDataList.filter(function(item){return  item.type === type;})
             this.label = item;
             this.iconChoseName = item.iconName;
+
+
             //console.log(this.tagRecord[index].type);
             //因为删除了tagRecord的项目之后，index和顺序不匹配，所以不能用这种写法了
             //this.tagType = this.tagRecord[index].type;

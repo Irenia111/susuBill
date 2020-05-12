@@ -1,12 +1,26 @@
-$fontsize-0:36px;
+$fontsize-0 : 36px;
 $fontsize-1 : 24px;
 $fontsize-2 : 14px;
 $fontsize-3 : 12px;
 $fontsize-2-1 : 18px;
 
-$background-color-1:#ffffff;
-$background-color-2:#f2f1f6;
-$background-color-3:#eaeaec;
+$theme-color : #ff4c00;
+
+$background-color-1 : #ffffff;
+$background-color-2 : #f2f1f6;
+$background-color-3 : #eaeaec;
+
+
+$tag-background-corlor : #e6e6e8;
+
+$selected-border : #cfcfd1;
+$selected-background-color : #e6e6e8;
+
+$font-color-0 : #3b3b3b;
+$font-color-1 : #b9b9b9;
+$font-color-2 : #969696;
+$font-color-3 : #717171;
+
 
 //placeholder
 %clearFix{

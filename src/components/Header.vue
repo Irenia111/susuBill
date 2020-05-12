@@ -38,18 +38,27 @@
 
 
 
-
+        /*
         @Prop(String)
         readonly pathName!: string;
 
-        path: Array<string> =["/home","/money"];
+        path: Array<string> =["/home","/money","/subject"];
+        */
 
         goPath(){
+            //这里是否可以使用this.$router.back
+            this.$router.back();
+            /*
             if(this.pathName === '0'){
                 this.$router.push(this.path[0]);
-            }else{
+            }else if(this.pathName === '1'){
                 this.$router.push(this.path[1]);
             }
+            else{
+                this.$router.push(this.path[2]);
+            }
+
+             */
 
 
 
@@ -68,9 +77,11 @@
     .anticon {
                 font-size: $fontsize-1;
                 color:black;
+                font-weight: bolder;
             }
      button{
-            color: red;
+            color: $theme-color;
+            font-weight: bolder;
         }
 
 </style>
@@ -83,6 +94,9 @@
         background:$background-color-1;
         justify-content: space-between;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        font-weight: bolder;
+
+
         > .link{
             margin: 10px 10px;
 
@@ -99,7 +113,7 @@
             }
             > button{
                 font-size: $fontsize-2-1;
-                color: red;
+                color: $theme-color;
             }
         }
 

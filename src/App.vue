@@ -4,12 +4,10 @@
   </div>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue';
-  import {Component} from 'vue-property-decorator';
-  @Component
-  export default class App extends Vue{
+<script >
 
+  export default {
+    name: 'App',
     mounted() {
       // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
       const vh = window.innerHeight * 0.01
@@ -23,6 +21,10 @@
         //console.log(vh);
         document.documentElement.style.setProperty('--vh', `${vh}px`)
       })
+
+if(document.documentElement.clientWidth>800){
+  this.$router.push('/qrcode');
+}
     }
   }
 

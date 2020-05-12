@@ -20,7 +20,7 @@
         vertical-align: -0.15em;
         fill: currentColor;
         overflow: hidden;
-        color: black;
+        color: inherit;
         font-size: inherit;
     }
 </style>

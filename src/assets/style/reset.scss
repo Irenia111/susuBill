@@ -17,6 +17,18 @@ input{
 :focus{
   outline:none;
 }
+button{
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
 button,font{
   font:inherit;
+}
+.ant-calendar-today-btn{
+  color:#ff4c00;
+}
+.ant-btn.ant-btn-primary{
+  background: #ff4c00;
+  border:#ff4c00 1px solid;
 }

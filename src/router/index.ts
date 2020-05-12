@@ -2,9 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Money from '@/views/Money.vue'
+import MoneyEdit from '@/views/MoneyEdit.vue'
 import Subject from '../views/Subject.vue'
 import Statistics from '../views/Statistics.vue'
 import SubjectEdit from '../views/SubjectEdit.vue'
+import SubjectReedit from '../views/SubjectReedit.vue'
+import QrCode from '../views/QrCode.vue'
 
 
 Vue.use(VueRouter);
@@ -36,6 +39,11 @@ const routes = [
         component: Money
     },
     {
+        path: '/moneyedit/:index',
+        name: 'MoneyEdit',
+        component: MoneyEdit
+    },
+    {
         path: '/subject',
         name: 'Subject',
         component: Subject
@@ -46,9 +54,19 @@ const routes = [
         component: SubjectEdit
     },
     {
+        path: '/subjectreedit/:index',
+        name: 'SubjectReedit',
+        component: SubjectReedit
+    },
+    {
         path: '/statistics',
         name: 'Statistics',
         component: Statistics
+    },
+    {
+        path: '/qrcode',
+        name: 'Qrcode',
+        component: QrCode
     },
 
 ]

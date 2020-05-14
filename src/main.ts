@@ -2,13 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
-// @ts-ignore
+
 import store from "./store/index.js";
 
 import MyIcon from'../src/components/MyIcon.vue';
-// @ts-ignore
+
 import VeLine from 'v-charts/lib/line.common';
 
+import fastcilck from 'fastclick'
 //部分引入ant design的组件
 import { Button, Icon, DatePicker,Input,message, Modal} from 'ant-design-vue';
 //不引入样式表，依旧无法使用
@@ -35,12 +36,11 @@ Vue.component(Modal.name,Modal);
 
 Vue.prototype.$message = message;
 
-
-
+//在body上使用fastclick
+fastcilck.attach(document.body)
 
 new Vue({
   router:router,
-  // @ts-ignore
   store:store,
   render: h => h(App)
 }).$mount('#app')

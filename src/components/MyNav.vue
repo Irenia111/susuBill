@@ -27,6 +27,7 @@
 <style lang="scss"  scoped>
     @import "../assets/style";
     nav {
+        min-height: 8vh;
         display: flex;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 

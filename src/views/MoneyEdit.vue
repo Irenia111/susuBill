@@ -17,7 +17,7 @@
     import LableList from '@/components/LableList.vue';
     import VHeader from "@/components/Header.vue";
     import NumPad from "@/components/NumPad.vue";
-    import {getTagRecord} from "@/api";
+    //import {getTagRecord} from "@/api";
 
     //设置本地数据库的版本号，方便之后升级数据库
     window.localStorage.setItem('version',"0.01");
@@ -148,6 +148,7 @@
         background: $background-color-2;
 
         > .myHeader{
+            flex-shrink: 0;
             min-height: 8vh;
         }
 
@@ -157,6 +158,7 @@
             margin: 1.54vw 2.3vw 0px 2.3vw;
         }
         > .num{
+            flex-shrink: 0;
             margin: 1.54vw 2.3vw 3.08vw 2.3vw;
         }
     }

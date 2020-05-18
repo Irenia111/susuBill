@@ -241,10 +241,12 @@
         flex-direction: column;
         background: $background-color-2;
         > .nav{
+            flex-shrink: 0;
             z-index: 1;
             background: $background-color-1;
         }
         > .tabWrapper{
+            flex-shrink: 0;
             padding: 0 6vw;
             margin: 5vw 0 4vw 0;
             display: flex;
@@ -275,7 +277,7 @@
                         margin-top: 3px;
                         font-size: $fontsize-0;
                         color:$font-color-0;
-                        font-family: Consolas;
+                        letter-spacing: -2px;
                     }
 
                     > .dateWrapper {

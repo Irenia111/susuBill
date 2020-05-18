@@ -196,15 +196,18 @@
 
         > .nav{
             z-index: 1;
+            flex-shrink: 0;
         }
 
         > .wrapper{
+            flex-shrink: 0;
             background: $background-color-2;
             display: flex;
             flex-direction: column;
             padding: 0 6vw;
             font-weight: bolder;
             > .tittle{
+                flex-shrink: 0;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -225,6 +228,7 @@
                 }
             }
             > .dateWrapper{
+                flex-shrink: 0;
                 display: flex;
                 align-items: center;
                 > .date{
@@ -258,6 +262,7 @@
             }
 
             > .des{
+                flex-shrink: 0;
                 background: $background-color-1;
                 border-radius: 8px;
                 margin:8px 0 20px 0;

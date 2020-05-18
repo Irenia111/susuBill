@@ -196,6 +196,7 @@
         background: $background-color-2;
 
         > .myHeader{
+            flex-shrink: 0;
             min-height: 8vh;
         }
 
@@ -205,6 +206,7 @@
             margin: 1.54vw 2.3vw 0 2.3vw;
         }
         > .num{
+            flex-shrink: 0;
             margin: 1.54vw 2.3vw 3.08vw 2.3vw;
         }
     }

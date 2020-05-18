@@ -33,7 +33,7 @@
 <script>
     import VHeader from "@/components/Header.vue";
     import MyIcon from "@/components/MyIcon";
-    import {getTagData} from "@/api";
+    //import {getTagData} from "@/api";
     import tagDataList from "@/assets/tagData";
 
 
@@ -152,6 +152,7 @@
         width: 100vw;
 
         >.myHeader{
+            flex-shrink: 0;
             min-height: 8vh;
         }
 

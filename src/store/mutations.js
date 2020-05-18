@@ -1,4 +1,4 @@
-import {getTagRecord} from "../api";
+//import {getTagRecord} from "../api";
 import tagRecordList from "@/assets/tagRecord";
 import recordListDemo from "@/assets/recordList";
 
@@ -45,7 +45,7 @@ const mutations = {
         }
     },
     fetchRecordList(state){
-        state.recordList = JSON.parse(window.localStorage.getItem("recordList"))||[];
+        state.recordList = JSON.parse(window.localStorage.getItem("recordList"))||recordListDemo;
             //recordListDemo;
     },
     fetchBudgetList(state){
@@ -144,7 +144,7 @@ const mutations = {
     editTagRecord(state,item){
         let editIndex = -1;
         for(let i=0;i<state.tagRecord.length;i++){
-            if(state.tagRecord[i].index === itme.index){
+            if(state.tagRecord[i].index === item.index){
                 editIndex = i;
                 break;
             }

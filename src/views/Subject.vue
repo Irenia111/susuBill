@@ -100,6 +100,7 @@
                 flex-direction: column;
 
                 > .myHeader{
+                        flex-shrink: 0;
                         min-height: 8vh;
                         z-index: 1;
                 }

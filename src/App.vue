@@ -6,6 +6,19 @@
 
 <script >
 
+  document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    WeixinJSBridge.call('hideToolbar');
+  })
+  // 这个会无法操作 ：window.location.replace('url')
+
+  document.addEventListener('DOMContentLoad', () => {
+    let body = document.getElementsByTagName('body')[0]
+    body.style.height = window.innerHeight + 100 + 'px'
+    window.scrollTo(0, 100)
+    body.style.height = window.innerHeight + 'px'
+  })
+  document.addEventListener('touchmove', function (e) { e.preventDefault() }, false)
+
   export default {
     name: 'App',
     mounted() {
@@ -22,9 +35,8 @@
         document.documentElement.style.setProperty('--vh', `${vh}px`)
       })
 
-if(document.documentElement.clientWidth>800){
-  this.$router.push('/qrcode');
-}
+      if(document.documentElement.clientWidth>800){this.$router.push('/qrcode')}
+
     }
   }
 
